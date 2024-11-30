@@ -103,5 +103,4 @@ theme: dashed
 deploy:
   type: git
   repo: https://github.com/485a49/485a49.github.io
-  # example, https://github.com/hexojs/hexojs.github.io
   branch: main
