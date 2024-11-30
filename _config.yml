@@ -102,6 +102,6 @@ theme: dashed
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/485a49/485a59.github.io
+  repo: https://github.com/485a49/485a49.github.io
   # example, https://github.com/hexojs/hexojs.github.io
   branch: main
