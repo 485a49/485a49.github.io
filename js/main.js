@@ -20,6 +20,12 @@
         $('.justified-gallery').justifiedGallery();
     }
 
+    // if (typeof moment === 'function') {
+    //     $('.article-meta time').each(function() {
+    //         $(this).text(moment($(this).attr('datetime')).fromNow());
+    //     });
+    // }
+
     $('.article > .content > table').each(function () {
         if ($(this).width() > $(this).parent().width()) {
             $(this).wrap('<div class="table-overflow"></div>');
@@ -56,9 +62,9 @@
         $('figure.highlight').addClass('hljs');
         $('figure.highlight .code .line span').each(function () {
             const classes = $(this).attr('class').split(/\s+/);
-            for (const cls of classes) {
-                $(this).addClass('hljs-' + cls);
-                $(this).removeClass(cls);
+            if (classes.length === 1) {
+                $(this).addClass('hljs-' + classes[0]);
+                $(this).removeClass(classes[0]);
             }
         });
 
@@ -131,4 +137,7 @@
         $mask.on('click', toggleToc);
         $('.navbar-main .catalogue').on('click', toggleToc);
     }
+
+    $('div.container div.card[data-type=tags]').addClass('is-hidden-mobile');
+    $('div.container div.card[data-type=archives]').addClass('is-hidden-mobile');
 }(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings));
