@@ -11635,6 +11635,7 @@ figure.highlight.foldable div.level-left {
 }
 .katex-display {
   margin-top: -1em !important;
+  margin-bottom: -2em !important;
 }
 .katex-html {
   padding-top: 1em;
